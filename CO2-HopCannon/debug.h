@@ -1,8 +1,7 @@
 #ifndef CO2_HOPCANNON_DEBUG_H_
 #define CO2_HOPCANNON_DEBUG_H_
 
-#define DEBUG // Comment to skip debug messages on the serial console
-
+#include "settings.h"
 #include "Arduino.h"
 
 // https://www.baldengineer.com/arduino-f-macro.html for the F() macro and explanation

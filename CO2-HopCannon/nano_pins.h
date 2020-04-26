@@ -5,8 +5,8 @@
 // BUTTONs
 //************************************************************
 
-#define BTN_PLUS  A2 
-#define BTN_MINUS A3
+#define BTN_P A2 // Plus 
+#define BTN_M A3 // Minus
 
 //************************************************************
 // SOLENOID

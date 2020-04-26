@@ -8,31 +8,61 @@ class Buttons
 {
 public:
 
+    int ids_[2] = { BTN_P, BTN_M };
+    uint8_t size_ = sizeof(ids_)/sizeof(int);
+
     Buttons()
     {
-        pinMode(BTN_PLUS, INPUT);
-        pinMode(BTN_MINUS, INPUT);
+        for (uint8_t i = 0; i < size_; ++i) {
+            pinMode(ids_[i], INPUT);
+        }
     }
 
-    bool IsPressed(int button_pin, unsigned long press_duration = BUTTONS_PRESS_TIME_SHORT)
-    {
-        if (digitalRead(button_pin) == HIGH) {
-            unsigned long start_press = millis();
-            while (digitalRead(button_pin) == HIGH && (millis() - start_press < press_duration)) {}
-
-            if (digitalRead(button_pin) == HIGH && (millis() - start_press >= press_duration)) {
+    // Returns true if at least one of the buttons in the vector is pressed for the press_duration time
+    bool OneOfIsPressed(int *button_pins, int n, unsigned long press_duration = BUTTONS_PRESS_TIME_INSTANT) {
+        for (uint8_t i = 0; i < n; ++i) {
+            if (IsPressed(button_pins[i], press_duration)) {
                 return true;
             }
         }
         return false;
     }
 
-    bool IsPressedInstantly(int button_pin)
+    // Returns true if at least one of the available buttons is pressed for the press_duration time
+    bool OneOfIsPressed(unsigned long press_duration = BUTTONS_PRESS_TIME_INSTANT)
     {
-        if (digitalRead(button_pin) == HIGH) {
-            return true;
+        return OneOfIsPressed(ids_, size_);
+    }
+
+    // Returns true if all the buttons in the vector have HIGH state value
+    bool AreAllHigh(int *button_pins, int n)
+    {
+        for (int i = 0; i < n; ++i) {
+            if (digitalRead(button_pins[i]) != HIGH) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Returns true if all the buttons in the vector have been pressed for press_duration time
+    bool ArePressed(int *button_pins, int n, unsigned long press_duration = BUTTONS_PRESS_TIME_INSTANT)
+    {
+        if (AreAllHigh(button_pins, n)) {
+            unsigned long start_press = millis();
+            while (AreAllHigh(button_pins, n) && (millis() - start_press < press_duration)) {}
+
+            if (AreAllHigh(button_pins, n) && (millis() - start_press >= press_duration)) {
+                return true;
+            }
         }
         return false;
+    }
+
+    // Returns true if the button has been pressed for press_duration time
+    bool IsPressed(int button_pin, unsigned long press_duration = BUTTONS_PRESS_TIME_INSTANT)
+    {
+        return ArePressed(&button_pin, 1, press_duration);
     }
 
 };

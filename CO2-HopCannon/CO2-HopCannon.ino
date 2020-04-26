@@ -2,51 +2,39 @@
 #include <LiquidCrystal_I2C.h> // Library for LCD
 
 #include "debug.h"
-#include "buttons.h"
 #include "nano_pins.h"
+#include "solenoid.h"
+#include "utils.h"
 
-Buttons btns;
+// LCD screen
 LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 16, 2);
 
-#define DEFAULT_FIRE_FREQ 120 // min
+// Buttons
+Buttons btns;
 
-void DisplayLcd()
+// Solenoid valve (it takes the address of the LCD screen to display messages)
+Solenoid valve = Solenoid(&lcd, &btns);
+
+void setup()
 {
-    lcd.setCursor(0, 0);
-    lcd.print("Firing Frequency");
-
-    lcd.setCursor(0, 1);
-    lcd.print("min");
-}
-
-void setup() 
-{
-  // Setup serial port
+    // Serial port setup
 #ifdef DEBUG
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  } 
+    Serial.begin(115200);
+    while (!Serial) {
+        ; // wait for serial port to connect. Needed for native USB port only
+    }
 #endif
 
-  // CO2 VALVE
-  pinMode(SOLENOID, OUTPUT);
+    // LCD setup
+    lcd.init();
+    lcd.backlight();
+    valve.DisplayLcd();
 
-  // BTNs
-  // Already set by the constructor
-
-  // LCDs
-  lcd.init();
-  lcd.backlight();
-
-  // Display LCD's first values 
-  DisplayLcd();
+    DebugSerialPrintln(F("Setup completed!"));
 }
 
-void loop() 
+void loop()
 {
-  digitalWrite(SOLENOID, HIGH);      //Switch Solenoid ON
-  delay(1000);                          //Wait 1 Second
-  digitalWrite(SOLENOID, LOW);       //Switch Solenoid OFF
-  delay(1000);
+    valve.Update();
+    delay(1000);
 }
