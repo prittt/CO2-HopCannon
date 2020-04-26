@@ -8,7 +8,7 @@ class Buttons
 {
 public:
 
-    int ids_[2] = { BTN_P, BTN_M };
+    int ids_[3] = { BTN_S, BTN_P, BTN_M };
     uint8_t size_ = sizeof(ids_)/sizeof(int);
 
     Buttons()

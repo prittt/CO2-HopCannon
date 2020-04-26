@@ -5,6 +5,7 @@
 // BUTTONs
 //************************************************************
 
+#define BTN_S A1 // Setup
 #define BTN_P A2 // Plus 
 #define BTN_M A3 // Minus
 

@@ -49,7 +49,7 @@ class Solenoid
         SHOOTING,
     };
 
-    Mode view_mode_ = Mode::COUNTDOWN;
+    Mode view_mode_ = Mode::SETTINGS_FREQ;
 
     Buttons *btns_;
 public:
@@ -79,10 +79,10 @@ public:
         last_setting_mode_activity_ = millis();
     }
 
-    void Shot()
+    void Shot(bool manual = false)
     {
         DebugSerialPrintln(F("  -> START: Shooting"));
-        if (millis() - timer_ >= shot_freq_) {
+        if (millis() - timer_ >= shot_freq_ || manual) {
             // We have to fire a shot
 
             // Move LCD in shooting mode
@@ -120,6 +120,14 @@ public:
 
     void UpdateShotLeng(int update_value)
     {
+        unsigned long min_val = 1;
+        unsigned long max_val = 99999;
+
+        if (shot_leng_seconds_ + update_value < min_val ||
+            shot_leng_seconds_ + update_value > max_val) {
+            return;
+        }
+
         shot_leng_seconds_ += update_value;
         shot_leng_ = shot_leng_seconds_ * 1000;
 
@@ -131,6 +139,13 @@ public:
 
     void UpdateShotFreq(int update_value)
     {
+        unsigned long min_val = 10;
+        unsigned long max_val = 99999;
+
+        if (shot_freq_minutes_ + update_value < min_val ||
+            shot_freq_minutes_ + update_value > max_val) {
+            return;
+        }
         shot_freq_minutes_ += update_value;
         shot_freq_ = shot_freq_minutes_ * 60 * 1000;
 
@@ -203,7 +218,7 @@ public:
             lcd_->print("    SHOOTING    ");
             DrawGun(lcd_, 0, 1);
             lcd_->setCursor(3, 1);
-            lcd_->print("            ");
+            lcd_->print("             ");
             DrawBullet2(lcd_, 4 + (shooting_index_ % 12), 1);
             break;
         }
@@ -214,20 +229,29 @@ public:
     {
         DebugSerialPrintln(F("  -> START: Get Input"));
 
-        int pm_ids[] = { BTN_P, BTN_M };
-        int pm_ids_size = sizeof(pm_ids) / sizeof(int);
-
+        // Backlight ON/OFF
         if (btns_->OneOfIsPressed()) {
             DebugSerialPrintln(F("     * LIGHT ON"));
             lcd_->backlight();
             last_activity_ = millis();
         }
-        else if (millis() - last_activity_ >= (POWER_SAVE_TIMER * 1000)) {
+        else if (millis() - last_activity_ >= (unsigned long)(POWER_SAVE_TIMER) * 1000) {
             DebugSerialPrintln(F("     * LIGHT OFF"));
             lcd_->noBacklight();
         }
 
+        // Auto Shot
+        int pm_ids[] = { BTN_P, BTN_M };
+        int pm_ids_size = sizeof(pm_ids) / sizeof(int);
+
         if (btns_->ArePressed(pm_ids, pm_ids_size, BUTTONS_PRESS_TIME_SHORT)) {
+            DebugSerialPrintln(F("     * AUTO SHOT MODE"));
+            Shot(true);
+            last_activity_ = millis();
+        }
+
+        // Enter/exit settings mode
+        if (btns_->IsPressed(BTN_S, BUTTONS_PRESS_TIME_SHORT)) {
             DebugSerialPrintln(F("     * SETTING MODE"));
             // Settings mode
             if (view_mode_ == Mode::SETTINGS_FREQ) {
@@ -240,21 +264,22 @@ public:
             last_activity_ = millis();
             DisplayLcd();
         }
-        else if (millis() - last_setting_mode_activity_ >= (SETTING_MODE_TIMER * 1000)) {
+        else if (millis() - last_setting_mode_activity_ >= (unsigned long)(SETTING_MODE_TIMER) * 1000) {
             DebugSerialPrintln(F("     * COUNTDOWN MODE"));
             view_mode_ = Mode::COUNTDOWN;
             DisplayLcd();
         }
 
+        // Update freq/leng parameters
         unsigned long last_press_add_sub = millis();
-        if ((btns_->IsPressed(BTN_P) || btns_->IsPressed(BTN_M)) &&
+        if ((btns_->IsPressed(BTN_P, 1) || btns_->IsPressed(BTN_M, 1)) &&
             (view_mode_ == Mode::SETTINGS_LENG || view_mode_ == Mode::SETTINGS_FREQ)) {
             DebugSerialPrintln(F("     * UPDATING VALUES"));
 
             while (millis() - last_press_add_sub < 3000) {
                 DisplayLcd();
 
-                if (btns_->IsPressed(BTN_P, BUTTONS_PRESS_TIME_INSTANT)) {
+                if (btns_->IsPressed(BTN_P, 1)) {
                     switch (view_mode_) {
                     case Mode::SETTINGS_FREQ:
                         UpdateShotFreq(FREQ_UPDATE_STEP);
@@ -268,10 +293,11 @@ public:
                     last_setting_mode_activity_ = millis();
                     last_activity_ = millis();
                     last_press_add_sub = millis();
+                    DisplayLcd();
                     delay(350);
                 }
 
-                if (btns_->IsPressed(BTN_M, BUTTONS_PRESS_TIME_INSTANT)) {
+                if (btns_->IsPressed(BTN_M, 1)) {
                     switch (view_mode_) {
                     case Mode::SETTINGS_FREQ:
                         UpdateShotFreq(-FREQ_UPDATE_STEP);
@@ -285,6 +311,7 @@ public:
                     last_setting_mode_activity_ = millis();
                     last_activity_ = millis();
                     last_press_add_sub = millis();
+                    DisplayLcd();
                     delay(350);
                 }
             }
