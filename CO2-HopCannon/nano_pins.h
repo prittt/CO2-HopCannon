@@ -22,4 +22,13 @@
 #define SDA A4 
 #define SCL A5 
 
+//************************************************************
+// SD CARD 
+//************************************************************
+
+#define CS   10 // D10 (also called SS)
+#define MISO 12 // D12
+#define MOSI 11 // D11
+#define SCK  13 // D13
+
 #endif // CO2_HOPCANNON_NANO_PINS_H_

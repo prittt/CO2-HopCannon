@@ -11,6 +11,8 @@
 #include <Wire.h> // Library for I2C communication
 #include <LiquidCrystal_I2C.h> // Library for LCD
 
+#include <EEPROM.h> // To serialize state into EEPROM
+
 // This class serves both as solenoid handler and data/menu viewer
 // a better design should split the two things.
 class Solenoid
@@ -58,6 +60,14 @@ public:
         // Setup
         pinMode(SOLENOID, OUTPUT);
         digitalWrite(SOLENOID, LOW);
+
+        if (!FORCE_SETTINGS) {
+            Deserialize();
+        }
+        else {
+            // To ensure settings values as stored value at the next restart
+            Serialize();
+        }
 
         // Init
         shot_freq_minutes_str_ = String(shot_freq_minutes_);
@@ -115,7 +125,7 @@ public:
             // And reset the timer
             timer_ = millis();
         }
-        DebugSerialPrintln(F("  -> END: Shooting"));
+        DebugSerialPrintln(F("  <- END: Shooting"));
     }
 
     void UpdateShotLeng(int update_value)
@@ -130,6 +140,9 @@ public:
 
         shot_leng_seconds_ += update_value;
         shot_leng_ = shot_leng_seconds_ * 1000;
+
+        // Store new values in permanent memory
+        WriteUnsignedLong(shot_leng_seconds_, leng_start_address);
 
         // We have the same code in the constructor. A code refactor is required.
         shot_leng_seconds_str_ = String(shot_leng_seconds_);
@@ -148,6 +161,9 @@ public:
         }
         shot_freq_minutes_ += update_value;
         shot_freq_ = shot_freq_minutes_ * 60 * 1000;
+
+        // Store new values in permanent memory
+        WriteUnsignedLong(shot_freq_minutes_, freq_start_address);
 
         // We have the same code in the constructor. A code refactor is required.
         shot_freq_minutes_str_ = String(shot_freq_minutes_);
@@ -222,7 +238,7 @@ public:
             DrawBullet2(lcd_, 4 + (shooting_index_ % 12), 1);
             break;
         }
-        DebugSerialPrintln(F("  -> END: Updating Screen"));
+        DebugSerialPrintln(F("  <- END: Updating Screen"));
     }
 
     void GetInput()
@@ -317,7 +333,7 @@ public:
             }
         }
 
-        DebugSerialPrintln(F("  -> END: Get Input"));
+        DebugSerialPrintln(F("  <- END: Get Input"));
     }
 
     void Update()
@@ -327,6 +343,71 @@ public:
         Shot();
         GetInput();
         DebugSerialPrintln(F("<- END: Update Cycle"));
+    }
+
+    //Shift these values if memory is broken. 
+    const int freq_start_address = 0;
+    const int leng_start_address = 4;
+
+    unsigned long ReadUnsignedLong(int start_address)
+    {
+        unsigned long value = 0;
+        for (int i = 0; i < 4; ++i) {
+            value |= (unsigned long)(EEPROM.read(start_address + i)) << i * 8;
+        }
+        return value;
+    }
+
+    void WriteUnsignedLong(unsigned long value, int start_address)
+    {
+        for (int i = 0; i < 4; ++i) {
+            EEPROM.write(start_address + i, (byte)((value >> i * 8) & 0xFF));
+        }
+
+        /*
+        EEPROM.write(start_address + 0, (byte)((value >>  0) & 0xFF));
+        EEPROM.write(start_address + 1, (byte)((value >>  8) & 0xFF));
+        EEPROM.write(start_address + 2, (byte)((value >> 16) & 0xFF));
+        EEPROM.write(start_address + 3, (byte)((value >> 24) & 0xFF));
+        */
+    }
+
+    // Read & Write EEPROM test
+    void ReadAndWriteEepromTest()
+    {
+        unsigned long val = 62111234;
+        WriteUnsignedLong(val, freq_start_address);
+        delay(3000);
+        unsigned long read = ReadUnsignedLong(freq_start_address);
+        DebugSerialPrintln(String(read));
+        delay(500000); // To avoid burning it!
+    }
+
+    void Deserialize() 
+    {
+        DebugSerialPrintln(F("-> START: Deserialization"));
+        shot_freq_minutes_ = ReadUnsignedLong(freq_start_address);
+        shot_leng_seconds_ = ReadUnsignedLong(leng_start_address);
+        DebugSerialPrintln(F("<- END: Deserialization"));
+    }
+
+    void Serialize() 
+    {
+        DebugSerialPrintln(F("-> START: Serialization"));
+        unsigned long stored_shot_freq_minutes_ = ReadUnsignedLong(freq_start_address);
+        unsigned long stored_shot_leng_seconds_ = ReadUnsignedLong(leng_start_address);
+
+        if (stored_shot_freq_minutes_ != shot_freq_minutes_) {
+            DebugSerialPrintln(F("  * FREQUENCY SERIALIZATION"));
+            WriteUnsignedLong(shot_freq_minutes_, freq_start_address);
+        }
+
+        if (stored_shot_leng_seconds_ != shot_leng_seconds_) {
+            DebugSerialPrintln(F("  * LENGTH SERIALIZATION"));
+            WriteUnsignedLong(shot_leng_seconds_, leng_start_address);
+        }
+
+        DebugSerialPrintln(F("<- END: Serialization"));
     }
 
 };

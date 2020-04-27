@@ -1,6 +1,9 @@
 #include <Wire.h> // Library for I2C communication
 #include <LiquidCrystal_I2C.h> // Library for LCD
 
+#include <SPI.h> // Required for the SD
+#include <SD.h>  // Required for the SD
+
 #include "debug.h"
 #include "nano_pins.h"
 #include "solenoid.h"
