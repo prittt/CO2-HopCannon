@@ -141,9 +141,6 @@ public:
         shot_leng_seconds_ += update_value;
         shot_leng_ = shot_leng_seconds_ * 1000;
 
-        // Store new values in permanent memory
-        WriteUnsignedLong(shot_leng_seconds_, leng_start_address);
-
         // We have the same code in the constructor. A code refactor is required.
         shot_leng_seconds_str_ = String(shot_leng_seconds_);
         shot_leng_seconds_msg_ = "Leng.: " + RepeatString(" ", SLS - shot_leng_seconds_str_.length()) + shot_leng_seconds_str_ + " s";
@@ -161,9 +158,6 @@ public:
         }
         shot_freq_minutes_ += update_value;
         shot_freq_ = shot_freq_minutes_ * 60 * 1000;
-
-        // Store new values in permanent memory
-        WriteUnsignedLong(shot_freq_minutes_, freq_start_address);
 
         // We have the same code in the constructor. A code refactor is required.
         shot_freq_minutes_str_ = String(shot_freq_minutes_);
@@ -331,6 +325,9 @@ public:
                     delay(350);
                 }
             }
+
+            // Store new values in permanent memory
+            Serialize();
         }
 
         DebugSerialPrintln(F("  <- END: Get Input"));
