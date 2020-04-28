@@ -9,19 +9,62 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 ## Components
 
-|Component|AliExpress|Amazon|Ebay|
-|---------|----------|------|----|
-|Arduino Nano (V3)||||
-|Diode (1N4007)||||
-|Transistor Darlington (TIP120)||||
-|John Guest Electrovalve|https://it.aliexpress.com/item/32642982184.html?spm=a2g0s.9042311.0.0.3bd14c4d8TaxGj|||
+<table>
+	<thead>
+		<tr>
+			<th>Component</th>
+			<th>Details</th>
+			<th>Online</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Arduino <br/> Nano</td>
+			<td>V3</td>
+			<td><a href="https://www.amazon.it/Elegoo-Scheda-Microcontrollore-ATmega328P-Arduino/dp/B0716S43Q2/ref=sr_1_4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=arduino+nano&qid=1588104837&sr=8-4">Amazon</a></td>
+		</tr>
+		<tr>
+			<td>Diode</td>
+			<td>1N4007</td>
+			<td><a href="https://it.aliexpress.com/item/32664545131.html?spm=a2g0o.productlist.0.0.6899567a3NuF81&algo_pvid=78dc39bc-4ebf-4a9c-8167-5baa3f28a214&algo_expid=78dc39bc-4ebf-4a9c-8167-5baa3f28a214-0&btsid=0ab6f83a15881049263985945e3fc1&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a></td>
+		</tr>
+		<tr>
+			<td>Transistor <br/> Darlington</td>
+			<td>TIP120</td>
+			<td><a href="https://it.aliexpress.com/item/2044826574.html?spm=a2g0o.productlist.0.0.3b995ca90w2gKK&algo_pvid=d3cd2bdf-1648-4a3b-a75f-ecba42b60a6c&algo_expid=d3cd2bdf-1648-4a3b-a75f-ecba42b60a6c-0&btsid=0ab6f83a15881050297504456e3fc1&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a>
+			<a href="https://www.amazon.it/gp/product/B079H1JSGD/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1">Amazon</a></td>
+		</tr>
+		<tr>
+			<td>John Guest <br/> Electrovalve</td>
+			<td>DC 12 V <br/> NC (normally close) <br> 0 < P < 0.8 Mpa <br/> 0 < °C < 80 <br/> john guest 9.52mm - 3/8"</td>
+			<td><a href="https://it.aliexpress.com/item/32642982184.html?spm=a2g0s.9042311.0.0.3bd14c4d8TaxGj">AliExpress</a></td>
+		</tr>
+		<tr>
+			<td>Switch Module <br/> with Fuse</td>
+			<td></td>
+			<td><a href="https://www.amazon.it/gp/product/B07T5D39R3/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1">Amazon</a></td>
+		</tr>
+		<tr>
+			<td>Resistors</td>
+			<td>2.2 KΩ (1x) and 10 kΩ (3x)</td>
+			<td><a href="https://it.aliexpress.com/item/33004978023.html?spm=a2g0o.productlist.0.0.2fe824eaUJMPHF&algo_pvid=77c3954e-7ed1-4a7a-a13f-c69968f4f4a8&algo_expid=77c3954e-7ed1-4a7a-a13f-c69968f4f4a8-1&btsid=0ab6f81e15881056260007023e7d15&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a>
+			<a href="https://www.amazon.it/Elegoo-Resistor-Assortimento-Progetti-Elettronica/dp/B071Z66XDV/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=resistori&qid=1588105577&sr=8-6">Amazon</a></td>
+		</tr>
+		<tr>
+			<td>Case</td>
+			<td>190 x 140 x 70 or bigger</td>
+			<td><a href="https://www.ebay.it/itm/Scatola-di-derivazione-da-esterno-con-pareti-lisce-190X140X70mm-2-Pezzi/273594021734?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649">eBay</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-	DC 12 V 
-	NC (normally close) 
-	0 < P <0.8 Mpa 
-	0 < °C < 80
-	john guest 9.52mm - 3/8"
-resistor 2.2 kohm
+LCD + MODULO I2C
+https://it.aliexpress.com/item/1935576611.html?spm=a2g0o.productlist.0.0.5d00470dE2xTCr&algo_pvid=b9f628c6-a950-4958-a5e6-75095abf762e&algo_expid=b9f628c6-a950-4958-a5e6-75095abf762e-0&btsid=0be3746c15881058703022133e9699&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_
+
+POWERSUPPLY 
+https://www.ebay.it/itm/ALIMENTATORE-TRASFORMATORE-12V-2A-STABILIZZATO-SWITCH-TRIMMER-220V-2-5A-12-VOLT/322668095291?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649
+220V 2,5A 12 VOLT  Size ~8.6 x ~5.8 x ~3.2cm or smaller
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
