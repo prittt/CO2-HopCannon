@@ -342,10 +342,11 @@ public:
         DebugSerialPrintln(F("<- END: Update Cycle"));
     }
 
-    //Shift these values if memory is broken. 
+    // Shift these values if memory is broken. 
     const int freq_start_address = 0;
     const int leng_start_address = 4;
 
+    // Should be moved in the utils file
     unsigned long ReadUnsignedLong(int start_address)
     {
         unsigned long value = 0;
@@ -355,6 +356,7 @@ public:
         return value;
     }
 
+    // Should be moved in the utils file
     void WriteUnsignedLong(unsigned long value, int start_address)
     {
         for (int i = 0; i < 4; ++i) {

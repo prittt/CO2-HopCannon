@@ -1,7 +1,7 @@
 #ifndef CO2_HOPCANNON_SETTINGS_H_
 #define CO2_HOPCANNON_SETTINGS_H_
 
-#define DEBUG // comment/uncomment this line to skip/view serial console debug messages
+//#define DEBUG // comment/uncomment this line to skip/view serial console debug messages
 
 #define DEFAULT_SHOT_FREQ  10 // minutes
 #define DEFAULT_SHOT_LENG   5 // seconds
