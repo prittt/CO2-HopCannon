@@ -1,4 +1,6 @@
-# Boost Your Dry Hopping with CO2
+<a href="eng"></a>
+
+# Boost Your Dry Hopping with CO2 <a href="#ita"><img src="/imgs/assets/flag-ita.png" height="30" width="30"/></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 
@@ -90,8 +92,9 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
+<a href="ita"></a>
 
-# Potenzia il tuo Dry Hopping con la CO2
+# Potenzia il tuo Dry Hopping con la CO2 <a href="#eng"><img src="/imgs/assets/flag-eng.png" height="30" width="30"/></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli)
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 
