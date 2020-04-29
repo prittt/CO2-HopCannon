@@ -20,13 +20,13 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 	</thead>
 	<tbody>
 		<tr>
-			<td></td>
+			<td><img src="/imgs/components/nano.png" height="100" width="100"></td>
 			<td>Arduino <br/> Nano</td>
 			<td>V3</td>
 			<td><a href="https://www.amazon.it/Elegoo-Scheda-Microcontrollore-ATmega328P-Arduino/dp/B0716S43Q2/ref=sr_1_4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=arduino+nano&qid=1588104837&sr=8-4">Amazon</a></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td><img src="/imgs/components/diode.png" height="100" width="100"></td>
 			<td>Diode</td>
 			<td>1N4007</td>
 			<td><a href="https://it.aliexpress.com/item/32664545131.html?spm=a2g0o.productlist.0.0.6899567a3NuF81&algo_pvid=78dc39bc-4ebf-4a9c-8167-5baa3f28a214&algo_expid=78dc39bc-4ebf-4a9c-8167-5baa3f28a214-0&btsid=0ab6f83a15881049263985945e3fc1&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a></td>
