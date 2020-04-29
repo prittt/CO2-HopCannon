@@ -1,4 +1,4 @@
-<a href="eng"></a>
+<a name="eng"></a>
 
 # Boost Your Dry Hopping with CO2 <a href="#ita"><img src="/imgs/assets/flag-ita.png" height="30" width="30"/></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
@@ -14,7 +14,7 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 <table>
 	<thead>
 		<tr>
-			<th></th>
+			<th>Picture</th>
 			<th>Component</th>
 			<th>Details</th>
 			<th>Online</th>
@@ -92,7 +92,7 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
-<a href="ita"></a>
+<a name="ita"></a>
 
 # Potenzia il tuo Dry Hopping con la CO2 <a href="#eng"><img src="/imgs/assets/flag-eng.png" height="30" width="30"/></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli)
