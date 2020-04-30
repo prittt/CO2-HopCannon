@@ -1,0 +1,28 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=CO2  HopCannon
+*Date=20:54:15
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;THT;25.0439;-11.1537;90;Bottom;J40
+2;;;11.0739;-26.3852;0;Bottom;Componente1
+3;;THT;39.0139;-34.0137;180;Bottom;J10
+4;;THT;23.7739;-35.2837;0;Bottom;J17
+5;2.2k;THT;27.5839;-16.2337;180;Bottom;R2
+6;;THT;33.9339;-8.61372;-90;Bottom;J9
+7;2.2k;THT;27.5839;-26.3937;180;Bottom;R3
+8;2.2k;THT;23.7739;-51.7937;0;Bottom;R1
+9;;THT;25.0439;-23.8537;90;Bottom;J39
+10;;THT;25.0439;-18.7737;90;Bottom;J38
+11;;diode-hv;36.4738;-26.3076;90;Bottom;D1
+12;;TO220 [THT];36.4739;-45.1897;180;Bottom;Q4
+13;2.2k;THT;27.5839;-13.6937;180;Bottom;R4
