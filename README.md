@@ -105,15 +105,34 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 	</tbody>
 </table>
 
-## How to
+## How to Reproduce the CO2-HopCannon
 
 ### Prepare your Case
 
 You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case_holes.pptx">case_holes.pptx</a>.
 
 
+<img src="/photos/case_01.png" width="50%" /> <img src="/photos/case_02.png" width="50%" /> <img src="/photos/case_03.png" width="50%" /> <img src="/photos/case_04.png" width="50%" />
+
+### Print the PCB
+
+<img src="/photos/pcb_01.png" width="50%" /> <img src="/photos/pcb_02.png" width="50%" /> <img src="/photos/pcb_03.png" width="50%" /> <img src="/photos/pcb_04.png" width="50%" />
+
+### Assemble Everything
+
+<img src="/photos/assemble_01.png" width="50%" /> <img src="/photos/assemble_02.png" width="50%" /> <img src="/photos/assemble_03.png" width="50%" /> <img src="/photos/assemble_04.png" width="50%" />
+
+### Load the Program
+
+#### Requirements
+
+- Arduino IDE (tested with version 1.8.8) to load the program into Arduino's memory;
+- Liquid Crystal I2C Arduino library. You can download the last version from <a href=""></a> or you can find the specific version I've tested and used in the <i>3rdparties</i> folder of this project.
+
+The CO2-HopCannon implementation is available in the <i>CO2-HopCannon</i> folder. After installing the Arduino IDE, you have to add the 3rdparty library and ...
 
 
+### Configure and Test
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
