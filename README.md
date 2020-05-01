@@ -2,6 +2,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 
+<img align="right" width="50%" src="/imgs/circuit.png" >
 
 <p align="justify">
 I have used the classic hop bags for years, but the result was not what I hoped for: I could not get the explosiveness of the hop I wanted. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free. Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon project creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the yield of the hops.
@@ -9,7 +10,7 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 ## Components
 
-<table>
+<table style="border: 0px">
 	<thead>
 		<tr>
 			<th>Picture</th>
@@ -79,14 +80,41 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 			</td>
 		</tr>
 		<tr>
-			<td><img src="/imgs/components/pin.png" height="100" width="100"></td>
+			<td><img src="/imgs/components/terminal.png" height="100" width="100"></td>
 			<td>2 PIN Connector</td>
 			<td>PIN spacing 5mm</td>
 			<td><a href="https://it.aliexpress.com/item/32841198269.html?spm=a2g0o.productlist.0.0.1f8d4082ix0yVo&algo_pvid=af18a170-4631-4fcd-a227-f5b6372b0d3f&algo_expid=af18a170-4631-4fcd-a227-f5b6372b0d3f-1&btsid=0ab6f83115881063575334308e0a7e&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a>
 			</td>
 		</tr>
+		<tr>
+			<td><img src="/imgs/components/push.png" height="100" width="100"></td>
+			<td>Push Button</td>
+			<td></td>
+			<td><a href="https://www.amazon.it/Larcele-Pulsante-Automatico-Momentaneo-Plastica/dp/B077FP8FT3/ref=sr_1_4?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=push+button&qid=1588346553&sr=8-4">Amazon</a> <br/>
+			<a href="https://it.aliexpress.com/item/32692164728.html?spm=a2g0o.productlist.0.0.38ea3b76LW0V3j&algo_pvid=be962fe0-d290-41fe-898c-13924c6fc5f4&algo_expid=be962fe0-d290-41fe-898c-13924c6fc5f4-0&btsid=0ab6f82115883482482127687e51fa&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress</a>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="/imgs/components/pins.png" height="100" width="100"></td>
+			<td>Male/Female PINs</td>
+			<td></td>
+			<td><a href="https://it.aliexpress.com/item/4000096249321.html?spm=a2g0o.productlist.0.0.6b15309aepL3hx&algo_pvid=eea3be9a-8bcf-4ccc-ae7d-1c7f33251343&algo_expid=eea3be9a-8bcf-4ccc-ae7d-1c7f33251343-10&btsid=0ab50f6215883505235385007efdd3&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress (Male)</a> <br/>
+			<a href="https://it.aliexpress.com/item/4000096276148.html?spm=a2g0o.productlist.0.0.7a3b570bPoAZYM&algo_pvid=53a06124-49cc-427b-9f04-bdd3a25efae1&algo_expid=53a06124-49cc-427b-9f04-bdd3a25efae1-11&btsid=0ab50f0815883528498925959e75c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress (Female)</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
+
+## How to
+
+### Prepare your Case
+
+You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case_holes.pptx">case_holes.pptx</a>.
+
+
+
+
+
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
