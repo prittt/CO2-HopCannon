@@ -112,15 +112,15 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case_holes.pptx">case_holes.pptx</a>.
 
 
-<img src="/photos/case_01.jpg" width="20%" /> <img src="/photos/case_02.jpg" width="20%" /> <img src="/photos/case_03.jpg" width="20%" /> <img src="/photos/case_04.jpg" width="20%" />
+<img src="/imgs/photos/case_01.jpg" width="20%" /> <img src="/imgs/photos/case_02.jpg" width="20%" /> <img src="/imgs/photos/case_03.jpg" width="20%" /> <img src="/imgs/photos/case_04.jpg" width="20%" />
 
 ### Print the PCB
 
-<img src="/photos/pcb_01.png" width="50%" /> <img src="/photos/pcb_02.png" width="50%" /> <img src="/photos/pcb_03.png" width="50%" /> <img src="/photos/pcb_04.png" width="50%" />
+<img src="/imgs/photos/pcb_01.jpg" width="20%" /> <img src="/imgs/photos/pcb_02.jpg" width="20%" /> <img src="/imgs/photos/pcb_03.jpg" width="20%" /> <img src="/imgs/photos/pcb_04.jpg" width="20%" />
 
 ### Assemble Everything
 
-<img src="/photos/assemble_01.png" width="50%" /> <img src="/photos/assemble_02.png" width="50%" /> <img src="/photos/assemble_03.png" width="50%" /> <img src="/photos/assemble_04.png" width="50%" />
+<img src="/imgs/photos/assemble_01.jpg" width="20%" /> <img src="/imgs/photos/assemble_02.jpg" width="20%" /> <img src="/imgs/photos/assemble_03.jpg" width="20%" /> <img src="/imgs/photos/assemble_04.jpg" width="20%" />
 
 ### Load the Program
 
