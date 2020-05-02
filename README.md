@@ -2,7 +2,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
-[![License](https://img.shields.io/github/license/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
+[![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
 <img align="right" width="50%" src="/imgs/circuit.png" >
 
@@ -111,10 +111,11 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 ### Prepare your Case
 
+<p align="justify">
 You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case_holes.pptx">case_holes.pptx</a>.
+</p>
 
-
-<img src="/imgs/photos/case_01.jpg" width="20%" /> <img src="/imgs/photos/case_02.jpg" width="20%" /> <img src="/imgs/photos/case_03.jpg" width="20%" /> <img src="/imgs/photos/case_04.jpg" width="20%" />
+<img src="/imgs/photos/case_01.jpg" width="24%" /> <img src="/imgs/photos/case_02.jpg" width="24%" /> <img src="/imgs/photos/case_03.jpg" width="24%" /> <img src="/imgs/photos/case_04.jpg" width="24%" />
 
 ### Print the PCB
 
