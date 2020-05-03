@@ -16,7 +16,7 @@
 #define FREQ_UPDATE_STEP  10 // minutes
 #define LENG_UPDATE_STEP   1 // seconds
 
-#define FORCE_SETTINGS 0 // 0 -> false, 1 -> true. It applyies only 
+#define FORCE_SETTINGS 0 // 0 -> false, 1 -> true. It applies only 
                          // for DEFAULT_SHOT_FREQ and DEFAULT_SHOT_LEN
                          // if true the previously set values (stored 
                          // in the EEPROM memory) will be ignored and 
