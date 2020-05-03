@@ -198,7 +198,7 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 				</tr>
 				</table>
 			</td>
-			<td>:heavy_check_mark:</td>
+			<td>:x:</td>
 		</tr>
 	</tbody>
 </table>
@@ -219,11 +219,17 @@ In case you do not have a CNC milling machine you can create the PCB using acid.
 
 <img src="/imgs/photos/assemble_01.jpg" width="24%" /> <img src="/imgs/photos/assemble_02.jpg" width="24%" /> <img src="/imgs/photos/assemble_03.jpg" width="24%" /> <img src="/imgs/photos/assemble_04.jpg" width="24%" />
 
+<p align="justify">
+Once the PCB is ready and the case has been drilled, you can proceed with the assembly!
+</p>
+
 ### The Super Cool Frame
 
 <img src="/imgs/photos/frame_01.jpg" width="24%" /> <img src="/imgs/photos/frame_02.jpg" width="24%" /> <img src="/imgs/photos/frame_03.jpg" width="24%" /> <img src="/imgs/photos/frame_04.jpg" width="24%" />
 
-<p align="justify">If you want to add a frame around the LCD screen like I did, find the 3D (stl) model in the <a href="/case/frame/">/case/frame/</a> folder. At the same path, the gcode file is also available for engraving the frame with a 6mm ball nose cutter.</p>
+<p align="justify">
+If you want to add a frame around the LCD screen like I did, find the 3D (stl) model in the <a href="/case/frame/">/case/frame/</a> folder. At the same path a gcode file is also available for engraving the frame with a 6mm ball nose cutter.
+</p>
 
 ### Load the Program
 
@@ -232,9 +238,17 @@ In case you do not have a CNC milling machine you can create the PCB using acid.
 - Arduino IDE (tested with version 1.8.8) to load the program into Arduino's memory;
 - Liquid Crystal I2C Arduino library. You can download the last version from <a href=""></a> or you can find the specific version I've tested and used in the <i>3rdparties</i> folder of this project.
 
-The CO2-HopCannon implementation is available in the <a href="/CO2-HopCannon/">CO2-HopCannon</a> folder. After installing the Arduino IDE, you have to add the 3rdparty library and ...
+The CO2-HopCannon implementation is available in the <a href="/CO2-HopCannon/">CO2-HopCannon</a> folder. After installing the Arduino IDE, you have to <a href="https://www.arduino.cc/en/guide/libraries" target="_blank">install the 3rdparty library</a> and upload the CO2-HopCannon sketch.
+
+Is this the first time you are using Arduino and you have no idea how to load a program? You should read <a href="https://www.arduino.cc/en/main/howto" target="_blank">this</a> article. 
 
 ### Configure and Test
+
+<p align="justify">
+If necessary, you can adjust configuration parameters by editing the file <a href="/CO2-HopCannon/settings.h">settings.h</a>. By default, the sketch will exploit the Arduino EEPROM memory to permanently store the configuration parameters (shot length and frequency) between different executions. 
+</p>
+
+
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
