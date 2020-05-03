@@ -98,10 +98,9 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 		</tr>
 		<tr>
 			<td><img src="/imgs/components/pins.png" height="100" width="100"></td>
-			<td>Male/Female PINs</td>
-			<td></td>
-			<td><a href="https://it.aliexpress.com/item/4000096249321.html?spm=a2g0o.productlist.0.0.6b15309aepL3hx&algo_pvid=eea3be9a-8bcf-4ccc-ae7d-1c7f33251343&algo_expid=eea3be9a-8bcf-4ccc-ae7d-1c7f33251343-10&btsid=0ab50f6215883505235385007efdd3&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress (Male)</a> <br/>
-			<a href="https://it.aliexpress.com/item/4000096276148.html?spm=a2g0o.productlist.0.0.7a3b570bPoAZYM&algo_pvid=53a06124-49cc-427b-9f04-bdd3a25efae1&algo_expid=53a06124-49cc-427b-9f04-bdd3a25efae1-11&btsid=0ab50f0815883528498925959e75c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress (Female)</a>
+			<td>Female PINs</td>
+			<td>15 PINs (1x), 4 PINs (1x), <br/> 10 PINs (1x), 2 PINs (3x)</td>
+			<td><a href="https://it.aliexpress.com/item/4000096276148.html?spm=a2g0o.productlist.0.0.7a3b570bPoAZYM&algo_pvid=53a06124-49cc-427b-9f04-bdd3a25efae1&algo_expid=53a06124-49cc-427b-9f04-bdd3a25efae1-11&btsid=0ab50f0815883528498925959e75c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress </a>
 			</td>
 		</tr>
 	</tbody>
@@ -111,19 +110,79 @@ I have used the classic hop bags for years, but the result was not what I hoped 
 
 ### Prepare your Case
 
-<p align="justify">
-You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case_holes.pptx">case_holes.pptx</a>.
-</p>
-
 <img src="/imgs/photos/case_01.jpg" width="24%" /> <img src="/imgs/photos/case_02.jpg" width="24%" /> <img src="/imgs/photos/case_03.jpg" width="24%" /> <img src="/imgs/photos/case_04.jpg" width="24%" />
 
-### Print the PCB
+<p align="justify">
+You have to drill and cut your case for buttons, valve, LCD, and power switch. The drilling models are available in the <a href="/case/case_holes.pdf">case_holes.pdf</a> pdf file, but make sure they match the components you purchased. When this is not the case you can change the models using the PowerPoint file <a href="/case/case_holes.pptx">case_holes.pptx</a>.
+</p>
 
-<img src="/imgs/photos/pcb_01.jpg" width="20%" /> <img src="/imgs/photos/pcb_02.jpg" width="20%" /> <img src="/imgs/photos/pcb_03.jpg" width="20%" /> <img src="/imgs/photos/pcb_04.jpg" width="20%" />
+### Create the PCB
+
+<img src="/imgs/photos/pcb_01.jpg" width="24%" /> <img src="/imgs/photos/pcb_02.jpg" width="24%" /> <img src="/imgs/photos/pcb_03.jpg" width="24%" /> <img src="/imgs/photos/pcb_04.jpg" width="24%" />
+
+<p align="justify">The PCB fritzing model (single layer) and all the other useful files are available in the <a href="/pcb/">pcb</a> folder. In the <a href="/pcb/export/">export subfolder</a> you can find the exported PCB in three different formats: <a href="/pcb/export/pfd/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, and <a href="/pcb/export/svg/">svg</a>. In the <a href="/pcb/flatcam/">flatcam</a> subfolder the <a href="http://flatcam.org/">flatcam</a> project to generate the routes for the CNC milling machine is provided. For convenience, a bunch of gcodes file are grouped in the <a href="/pcb/flatcam/">gcode folder</a>:</p> 
+
+<table style="border: 0px">
+	<thead>
+		<tr>
+			<th>Filename</th>
+			<th>Description</th>
+			<th>Drilling Tool</th>
+			<th>Mandatory</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>isolation_00_v2.nc</td>
+			<td>First step of the isolation route. </td>
+			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
+				|--------------|--------------|--------------|--------------|---------------|
+				| -0.007 inch  | 0.1 inch     | 3.0          | 0.016 inch   | 16500         |	 
+			</td>
+			<td>:heavy_check_mark:</td>
+		</tr>
+		<tr>
+			<td>isolation_01_v2.nc</td>
+			<td>Second step of the isolation route. </td>
+			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
+				|--------------|--------------|--------------|--------------|---------------|
+				| -0.007 inch  | 0.1 inch     | 3.0          | 0.016 inch   | 16500         |	 
+			</td>
+			<td>:x:</td>
+		</tr>
+		<tr>
+			<td>cut_out.nc</td>
+			<td>Board/Plate cut out route. </td>
+			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
+				|--------------|--------------|--------------|--------------|---------------|
+				| -0.063 inch  | 0.1 inch     | 3.0          | 0.0472 inch  | 16500         |	 
+			</td>
+			<td>:x:</td>
+		</tr>
+	</tbody>
+</table>
+
+<p align="justify">
+No gcode is available for the holes, but you can generate it from the flatcam project if you need it! The perfect tool for the isolation routes it the V-shaped Engraving Cutter. <b>Be careful</b> because the isolation routes have been generated using the non-mirrored PCB fritzing circuit. This means that Arduino nano must be welded upside down.
+</p>
+
+<p align="justify">
+The files starting with "AL" contain the same routes described above, but after the auto levelling process carried out with <a href="http://www.autoleveller.co.uk/">this</a> amazing software. 
+</p>
+
+<p align="justify">
+In case you do not have a CNC milling machine you can create the PCB using acid. A detailed explanation is available <a href="https://www.instructables.com/id/Acid-Etching-Printed-Circuit-Boards/" target="_blank">here</a>.
+</p>
 
 ### Assemble Everything
 
-<img src="/imgs/photos/assemble_01.jpg" width="20%" /> <img src="/imgs/photos/assemble_02.jpg" width="20%" /> <img src="/imgs/photos/assemble_03.jpg" width="20%" /> <img src="/imgs/photos/assemble_04.jpg" width="20%" />
+<img src="/imgs/photos/assemble_01.jpg" width="24%" /> <img src="/imgs/photos/assemble_02.jpg" width="24%" /> <img src="/imgs/photos/assemble_03.jpg" width="24%" /> <img src="/imgs/photos/assemble_04.jpg" width="24%" />
+
+### The Super Cool Frame
+
+<img src="/imgs/photos/frame_01.jpg" width="24%" /> <img src="/imgs/photos/frame_02.jpg" width="24%" /> <img src="/imgs/photos/frame_03.jpg" width="24%" /> <img src="/imgs/photos/frame_04.jpg" width="24%" />
+
+<p align="justify">If you want to add a frame around the LCD screen like I did, find the 3D (stl) model in the <a href="/case/frame/">/case/frame/</a> folder. At the same path, the gcode file is also available for engraving the frame with a 6mm ball nose cutter.</p>
 
 ### Load the Program
 
@@ -132,11 +191,9 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 - Arduino IDE (tested with version 1.8.8) to load the program into Arduino's memory;
 - Liquid Crystal I2C Arduino library. You can download the last version from <a href=""></a> or you can find the specific version I've tested and used in the <i>3rdparties</i> folder of this project.
 
-The CO2-HopCannon implementation is available in the <i>CO2-HopCannon</i> folder. After installing the Arduino IDE, you have to add the 3rdparty library and ...
-
+The CO2-HopCannon implementation is available in the <a href="/CO2-HopCannon/">CO2-HopCannon</a> folder. After installing the Arduino IDE, you have to add the 3rdparty library and ...
 
 ### Configure and Test
-
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
