@@ -135,9 +135,22 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 		<tr>
 			<td>isolation_00_v2.nc</td>
 			<td>First step of the isolation route. </td>
-			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
-				|--------------|--------------|--------------|--------------|---------------|
-				| -0.007 inch  | 0.1 inch     | 3.0          | 0.016 inch   | 16500         |	 
+			<td><table>
+				<tr>
+					<td>Cut Z</td>
+					<td>Travel Z</td>
+					<td>Feed Rate</td>
+					<td>Tool Diam.</td>
+					<td>Spindle Speed</td>
+				</tr>
+				<tr>
+					<td>-0.007 inch</td>
+					<td>0.1 inch</td>
+					<td>3.0</td>
+					<td>0.016 inch</td>
+					<td>16500</td>
+				</tr>
+				</table>
 			</td>
 			<td>:heavy_check_mark:</td>
 		</tr>
@@ -157,7 +170,7 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 				|--------------|--------------|--------------|--------------|---------------|
 				| -0.063 inch  | 0.1 inch     | 3.0          | 0.0472 inch  | 16500         |	 
 			</td>
-			<td>:x:</td>
+			<td>:heavy_check_mark:</td>
 		</tr>
 	</tbody>
 </table>
