@@ -120,6 +120,8 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 
 <img src="/imgs/photos/pcb_01.jpg" width="24%" /> <img src="/imgs/photos/pcb_02.jpg" width="24%" /> <img src="/imgs/photos/pcb_03.jpg" width="24%" /> <img src="/imgs/photos/pcb_04.jpg" width="24%" />
 
+<img src="/imgs/pcb_05.png" width="24%" /> <img src="/imgs/pcb_06.png" width="24%" /> <img src="/imgs/pcb_07.png" width="24%" /> <img src="/imgs/pcb_08.png" width="24%" />
+
 <p align="justify">The PCB fritzing model (single layer) and all the other useful files are available in the <a href="/pcb/">pcb</a> folder. In the <a href="/pcb/export/">export subfolder</a> you can find the exported PCB in three different formats: <a href="/pcb/export/pfd/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, and <a href="/pcb/export/svg/">svg</a>. In the <a href="/pcb/flatcam/">flatcam</a> subfolder the <a href="http://flatcam.org/">flatcam</a> project to generate the routes for the CNC milling machine is provided. For convenience, a bunch of gcodes file are grouped in the <a href="/pcb/flatcam/">gcode folder</a>:</p> 
 
 <table style="border: 0px">
@@ -157,18 +159,44 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 		<tr>
 			<td>isolation_01_v2.nc</td>
 			<td>Second step of the isolation route. </td>
-			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
-				|--------------|--------------|--------------|--------------|---------------|
-				| -0.007 inch  | 0.1 inch     | 3.0          | 0.016 inch   | 16500         |	 
+			<td><table>
+				<tr>
+					<td>Cut Z</td>
+					<td>Travel Z</td>
+					<td>Feed Rate</td>
+					<td>Tool Diam.</td>
+					<td>Spindle Speed</td>
+				</tr>
+				<tr>
+					<td>-0.007 inch</td>
+					<td>0.1 inch</td>
+					<td>3.0</td>
+					<td>0.016 inch</td>
+					<td>16500</td>
+				</tr>
+				</table> 
 			</td>
 			<td>:x:</td>
 		</tr>
 		<tr>
 			<td>cut_out.nc</td>
 			<td>Board/Plate cut out route. </td>
-			<td>| Cut Z        | Travel Z     | Feed Rate    | Tool Diam.   | Spindle Speed |
-				|--------------|--------------|--------------|--------------|---------------|
-				| -0.063 inch  | 0.1 inch     | 3.0          | 0.0472 inch  | 16500         |	 
+			<td><table>
+				<tr>
+					<td>Cut Z</td>
+					<td>Travel Z</td>
+					<td>Feed Rate</td>
+					<td>Tool Diam.</td>
+					<td>Spindle Speed</td>
+				</tr>
+				<tr>
+					<td>-0.063 inch</td>
+					<td>0.1 inch</td>
+					<td>3.0</td>
+					<td>0.0472 inch</td>
+					<td>16500</td>
+				</tr>
+				</table>
 			</td>
 			<td>:heavy_check_mark:</td>
 		</tr>
