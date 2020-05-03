@@ -61,14 +61,8 @@ public:
         pinMode(SOLENOID, OUTPUT);
         digitalWrite(SOLENOID, LOW);
 
-        if (!FORCE_SETTINGS) {
-            Deserialize();
-        }
-        else {
-            // To ensure settings values as stored value at the next restart
-            Serialize();
-        }
-
+        Deserialize();
+ 
         // Init
         shot_freq_minutes_str_ = String(shot_freq_minutes_);
         shot_freq_minutes_msg_ = "Freq.: " + RepeatString(" ", FLS - shot_freq_minutes_str_.length()) + shot_freq_minutes_str_ + " m";
@@ -346,6 +340,11 @@ public:
     const int freq_start_address = 0;
     const int leng_start_address = 4;
 
+    const unsigned long init_eeprom_value = 123456;
+    // If this address (4 byte) contains a value different from "init_eeprom_value" it means that the EEPROM
+    // has not been initialized yet and thus settings parameters must be used.
+    const int init_eeprom_address = 32;
+
     // Should be moved in the utils file
     unsigned long ReadUnsignedLong(int start_address)
     {
@@ -384,6 +383,24 @@ public:
 
     void Deserialize() 
     {
+        if (FORCE_SETTINGS) {
+            return;
+        }
+        
+        // Before deserialize I must be sure the EEPROM contains valid data,
+        // so I need to check the value stored at the init address 
+        unsigned long init_read = ReadUnsignedLong(init_eeprom_address);
+        if (init_read != init_eeprom_value) {
+            // This is the first time we run this program. Let's initialize the 
+            // EEPROM with the parameters specified in the settings.h file. 
+            Serialize();
+
+            // And update the "init_eeprom_address" with the init value for the
+            // next run
+            WriteUnsignedLong(init_eeprom_value, init_eeprom_address);
+            return;
+        }
+
         DebugSerialPrintln(F("-> START: Deserialization"));
         shot_freq_minutes_ = ReadUnsignedLong(freq_start_address);
         shot_leng_seconds_ = ReadUnsignedLong(leng_start_address);
@@ -392,6 +409,10 @@ public:
 
     void Serialize() 
     {
+        if (FORCE_SETTINGS) {
+            return;
+        }
+
         DebugSerialPrintln(F("-> START: Serialization"));
         unsigned long stored_shot_freq_minutes_ = ReadUnsignedLong(freq_start_address);
         unsigned long stored_shot_leng_seconds_ = ReadUnsignedLong(leng_start_address);
