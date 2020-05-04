@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
 [![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
-<img align="right" width="50%" src="/imgs/photos/preview_00.jpg" >
+<img align="right" width="40%" src="/imgs/photos/preview_00.jpg" >
 
 <p align="justify">
 I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extracion.
@@ -596,6 +596,6 @@ Quando il CO2-HopCannon si trova in modalità <b>Countdown</b> o <b>Settings</b>
 </p>
 
 ## Donazioni
-Se questo progetto ti ha aiutato in qualche modo, puoi offrirmi una birra o un caffè :smiley:
+Se questo progetto ti ha aiutato in qualche modo offrirmi una birra o un caffè :smiley:
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
