@@ -103,6 +103,13 @@ I have used the classic hop bags for years, but the result was not as expected. 
 			<td><a href="https://it.aliexpress.com/item/4000096276148.html?spm=a2g0o.productlist.0.0.7a3b570bPoAZYM&algo_pvid=53a06124-49cc-427b-9f04-bdd3a25efae1&algo_expid=53a06124-49cc-427b-9f04-bdd3a25efae1-11&btsid=0ab50f0815883528498925959e75c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress </a>
 			</td>
 		</tr>
+		<tr>
+			<td><img src="/imgs/components/cable.png" height="100" width="100"></td>
+			<td>Power Cable</td>
+			<td></td>
+			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">AliExpress </a>
+			</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -395,6 +402,13 @@ Ho utilizzato le classiche hop bag per anni, ma i risultati non erano quelli spe
 			<td>PIN Femmina</td>
 			<td>15 PIN (1x), 4 PIN (1x), <br/> 10 PIN (1x), 2 PIN (3x)</td>
 			<td><a href="https://it.aliexpress.com/item/4000096276148.html?spm=a2g0o.productlist.0.0.7a3b570bPoAZYM&algo_pvid=53a06124-49cc-427b-9f04-bdd3a25efae1&algo_expid=53a06124-49cc-427b-9f04-bdd3a25efae1-11&btsid=0ab50f0815883528498925959e75c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_">AliExpress </a>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="/imgs/components/cable.png" height="100" width="100"></td>
+			<td>Cavo di <br />Alimentazione</td>
+			<td></td>
+			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">AliExpress </a>
 			</td>
 		</tr>
 	</tbody>
