@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
 [![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
-<img align="right" width="50%" src="/imgs/circuit.png" >
+<img align="right" width="50%" src="/imgs/photos/preview_00.jpg" >
 
 <p align="justify">
 I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extracion.
@@ -244,7 +244,7 @@ The CO2-HopCannon implementation is available in the <a href="/CO2-HopCannon/">C
 
 Is this the first time you are using Arduino and you have no idea how to load a program? You should read <a href="https://www.arduino.cc/en/main/howto" target="_blank">this</a> article. 
 
-### Configuration and Tests
+### Configuration and Usage
 
 <p align="justify">
 If necessary, you can adjust configuration parameters by editing the file <a href="/CO2-HopCannon/settings.h">settings.h</a>. By default, the sketch will exploit the Arduino EEPROM memory to permanently store the configuration parameters (shot length and frequency) between different executions. 
@@ -262,21 +262,21 @@ There are basically three state modes for the CO2-HopCannon:
 <table>
 	<tr>
 		<td><img src="/imgs/usage/mode_01.jpg" width="40%" /> </td>	
-		<td><b>Countdown Mode</b></td> 
+		<td><b>Countdown</b></td> 
 		<td>
 		<p align="justify">The display shows a countdown timer to the next shot.</p>
 		</td>
 	</tr>
 	<tr>
 		<td><img src="/imgs/usage/mode_02.jpg" width="40%" /> </td>	
-		<td><b>Settings Mode:</b></td>
+		<td><b>Settings</b></td>
 		<td>
 		<p align="justify">The display shows the configuration menu. When the CO2-HopCannon is in configuration mode you can update shot frequency and length by pressing <i>+</i> and/or <i>-</i> buttons. It is possible to enter the configuration mode or switch from frequency to length update by pressing and holding the <i>setup</i> button. After a period of inactivity the CO2-HopCannon will automatically switch to <b>Countdown Mode</b> again.</p>
 		</td>
 	</tr>
 	<tr>
 		<td><img src="/imgs/usage/mode_03.jpg" width="40%" /> </td>	
-		<td><b>Shooting Mode</b></td>
+		<td><b>Shooting</b></td>
 		<td>
 		<p align="justify">The display a firing gun for the period in which the CO2 valve is open.</p>
 		</td>
@@ -284,11 +284,11 @@ There are basically three state modes for the CO2-HopCannon:
 </table>
 
 <p align="justify">
-When the CO2-HopCannon is in <b>Countdown</b> or <b>Settings</b> mode you can force a shot by simultaneously pressing and holding the <i>+</i> and <i>-</i> buttons.
+When the CO2-HopCannon is in <b>Countdown</b> or <b>Settings</b> mode you can force a shot by simultaneously pressing and holding the <i>+</i> and <i>-</i> buttons.  After a period of inactivity the CO2-HopCannon will automatically switch the LCD backlight off to save energy. To turn the LCD backlight on again you can press any button for a while.</p>
 </p>
 
 ## Donation
-If this project help you reduce time to develop, you can offer me a beer or a cup of coffee :smiley:
+If this project helped you in any way, you can offer me a beer or a coffee :smiley:
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
 
@@ -298,10 +298,10 @@ If this project help you reduce time to develop, you can offer me a beer or a cu
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
 [![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
-<img align="right" width="50%" src="/imgs/circuit.png" >
+<img align="right" width="50%" src="/imgs/photos/preview_00.jpg" >
 
 <p align="justify">
-Ho utilizzato le classiche hop bag per anni, ma i risultati non era quelli sperati: non riuscivo ad ottenere l'esplosività del luppolo che stavo cercando. Con il nuovo fermentatore a tronco conico ho provato ad aumentare l'efficacia del processo lasciando il lupppolo libero durante la fermentazione. Risultato? Peggio di prima! Il luppolo tende ad impaccarsi sul fondo del fermentatore e la quantità di aromi che rilascia è ridicola. Questo progetto, CO2-HopCannon, realizza un sistema automatico in grado di movimentare il luppolo all'interno del fermentatore durante il dry hopping, così da aumentarne al massimo la resa. 
+Ho utilizzato le classiche hop bag per anni, ma i risultati non erano quelli sperati: non riuscivo ad ottenere l'esplosività del luppolo che stavo cercando. Con il nuovo fermentatore a tronco conico ho provato ad aumentare l'efficacia del processo lasciando il lupppolo libero durante la fermentazione. Risultato? Peggio di prima! Il luppolo tende ad impaccarsi sul fondo del fermentatore e la quantità di aromi che rilascia è ridicola. Questo progetto, CO2-HopCannon, realizza un sistema automatico in grado di movimentare il luppolo all'interno del fermentatore usando la CO2, così da aumentarne al massimo la resa. 
 </p>
 
 ## Componenti
@@ -407,7 +407,7 @@ Ho utilizzato le classiche hop bag per anni, ma i risultati non era quelli spera
 <img src="/imgs/photos/case_01.jpg" width="24%" /> <img src="/imgs/photos/case_02.jpg" width="24%" /> <img src="/imgs/photos/case_03.jpg" width="24%" /> <img src="/imgs/photos/case_04.jpg" width="24%" />
 
 <p align="justify">
-Prima di tutto occorre forare il case così che possa ospitare bottono, valvola, LCB e slot di alimentazione.I modelli di foratura sono disponibili nella file pdf <a href="/case/case_holes.pdf">case_holes.pdf</a>, ma dovete assicuravi che le misure coincidano con i componenti acquistati. Se così non fosse potete cambiare i modelli usando il file PowerPoint <a href="/case/case_holes.pptx">case_holes.pptx</a>.
+Prima di tutto occorre forare il case così che possa ospitare pulsanti, valvola, LCD e slot di alimentazione. I modelli di foratura sono disponibili nella file pdf <a href="/case/case_holes.pdf">case_holes.pdf</a>, ma dovete assicuravi che le misure coincidano con i componenti acquistati. Se così non fosse potete modificare i modelli usando il file PowerPoint <a href="/case/case_holes.pptx">case_holes.pptx</a>.
 </p>
 
 ### Creazione del PCB
@@ -416,7 +416,7 @@ Prima di tutto occorre forare il case così che possa ospitare bottono, valvola,
 
 <img src="/imgs/photos/pcb_05.png" width="24%" /> <img src="/imgs/photos/pcb_06.png" width="24%" /> <img src="/imgs/photos/pcb_07.png" width="24%" /> <img src="/imgs/photos/pcb_08.jpg" width="24%" />
 
-<p align="justify">Il modello del PCB realizzato con fritzing (singola faccia) e tutti gli altri file utili sono disponibili nella cartella <a href="/pcb/">pcb</a>. Nella sottocartella <a href="/pcb/export/">export</a> potete trovare il progetto esportato in tre differenti formati: <a href="/pcb/export/pdf/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, e <a href="/pcb/export/svg/">svg</a>. Nella sottocartella <a href="/pcb/flatcam/">flatcam</a> è disponibile il progetto <a href="http://flatcam.org/">flatcam</a> per generare i percorsi per la fresa CNC. Per comodità, un seria di programmi gcode sono riportati nell'omonima cartella <a href="/pcb/flatcam/">gcode</a>:</p> 
+<p align="justify">Il modello del PCB realizzato con fritzing (singola faccia) e tutti gli altri file utili per l'incisione del PCB sono disponibili nella cartella <a href="/pcb/">pcb</a>. Nella sottocartella <a href="/pcb/export/">export</a> potete trovare il progetto esportato in tre differenti formati: <a href="/pcb/export/pdf/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, e <a href="/pcb/export/svg/">svg</a>. Nella sottocartella <a href="/pcb/flatcam/">flatcam</a> è disponibile il progetto <a href="http://flatcam.org/">flatcam</a> per generare i percorsi di incisione per la fresa CNC. Per comodità, un seria di file gcode sono riportati nell'omonima cartella <a href="/pcb/flatcam/">gcode</a>:</p> 
 
 <table style="border: 0px">
 	<thead>
@@ -498,15 +498,15 @@ Prima di tutto occorre forare il case così che possa ospitare bottono, valvola,
 </table>
 
 <p align="justify">
-Non è disponibile alcun file gcode per i fori, ma potete generalo voi stessi dal progetto flatcam se ne avete bisogno! La fresa "V-shaped" è la migliore per realizzare le piste del circuito. <b>Prestate attenzione</b> al fatto che i percorsi di isolamento (piste) del circuito sono stati generati usando la versione non-specchiata del progetto fritzing. Questo significa che Arduino deve essere saldato sottosopra per funzioanre correttamente.
+Non è disponibile alcun file gcode per i fori, ma se ne avete bisogno potete generalo voi stessi dal progetto flatcam! La fresa "V-shaped" è la migliore per realizzare le piste del circuito. <b>Prestate attenzione</b> al fatto che i percorsi di isolamento (piste) del circuito sono stati generati usando la versione non-specchiata del progetto fritzing. Questo significa che i pin di Arduino devono essere saldati al contrario perché il sistema funzioni a dovere.
 </p>
 
 <p align="justify">
-I file che iniziano con "AL" contengono gli stessi percorsi descritti in precedenza, ma dopo il processo di auto livellatura effettuato con <a href="http://www.autoleveller.co.uk/">questo</a> software. 
+I file che iniziano con "AL" contengono gli stessi percorsi descritti in precedenza, ma dopo averli sottoposti al processo di auto livellatura effettuato con <a href="http://www.autoleveller.co.uk/">questo</a> software. 
 </p>
 
 <p align="justify">
-Se non disponete di una fresa a controllo numerico potete realizzare il vostro PCB usando l'acido. Una spiegazione dettagliata su come fare è disponibile <a href="https://www.instructables.com/id/Acid-Etching-Printed-Circuit-Boards/" target="_blank">qui</a>.
+Se non disponete di una fresa CNC potete realizzare il vostro PCB usando l'acido. Una spiegazione dettagliata su come fare è disponibile <a href="https://www.instructables.com/id/Acid-Etching-Printed-Circuit-Boards/" target="_blank">qui</a>.
 </p>
 
 ### Assemblare il Tutto
@@ -522,15 +522,15 @@ Una volta che avete preparato il PCB e inciso il case potete procedere con l'ass
 <img src="/imgs/photos/frame_01.jpg" width="24%" /> <img src="/imgs/photos/frame_02.jpg" width="24%" /> <img src="/imgs/photos/frame_03.jpg" width="24%" /> <img src="/imgs/photos/frame_04.jpg" width="24%" />
 
 <p align="justify">
-Se volete anche voi aggiungere una cornice intorno all'LCD per abbellire il case e nasconde il taglio trovate il modello 3D (stl) nella cartella <a href="/case/frame/">/case/frame/</a>. Allo stesso percorso è anche disponbile il codice gcode per incidere la cornice con una fresa "naso a sfera" da 6mm.
+Se volete aggiungere una cornice allo schermo LCD per abbellire il case e nascondere il taglio trovate il modello 3D (stl) nella cartella <a href="/case/frame/">/case/frame/</a>. Allo stesso percorso è anche disponbile il codice gcode per incidere la cornice con una fresa "naso a sfera" da 6mm.
 </p>
 
 ### Caricare il Programma
 
 #### Prerequisiti
 
-- Arduino IDE (testato con la versione 1.8.8) per caricare il programma sulla memoria di Arduino;
-- Libreria Liquid Crystal I2C di Arduino. E' possibile scaricare la libreria da GitHub o potete trovare la versione specifica che testato e usato in questo progetto nella cartella <i>>3rdparties</i> del progetto.
+- Arduino IDE (testato con la versione 1.8.8) per caricare il programma su Arduino;
+- Libreria Liquid Crystal I2C di Arduino. È possibile scaricare la libreria da GitHub o potete trovare la versione specifica che ho testato e usato in questo progetto nella cartella <i>3rdparties</i>.
 
 #### Caricamento
 
@@ -558,14 +558,14 @@ Esistono fondamentalmente tre stati per il CO2-HopCannon:
 		<td><img src="/imgs/usage/mode_01.jpg" width="40%" /> </td>	
 		<td><b>Countdown</b></td> 
 		<td>
-		<p align="justify">Il display mostra il conto alla rovescia al prossimo sparo.</p>
+		<p align="justify">Il display mostra il tempo mancante al prossimo sparo.</p>
 		</td>
 	</tr>
 	<tr>
 		<td><img src="/imgs/usage/mode_02.jpg" width="40%" /> </td>	
 		<td><b>Settings</b></td>
 		<td>
-		<p align="justify">Il display mostra il menu di configurazione. Quando il CO2-HopCannon si trova in modalità di configurazione è possibile aggiornare la frequenza e/o la lunghezza di sparo premendo i pulsanti <i>+</i> e/o <i>-</i>. Per entrare in modalità di configurazione o passare dalla configurazione delle frequenza alla configurazione della lunghezza occorre premere e tener premuto il pulsante di <i>setup</i>. Dopo un periodo di inattività il CO2-HopCannon torna automaticamente inmodalità <b>Countdown</b>.</p>
+		<p align="justify">Il display mostra il menu di configurazione. Quando il CO2-HopCannon si trova in modalità di configurazione è possibile aggiornare la frequenza e/o la lunghezza di sparo premendo i pulsanti <i>+</i> e/o <i>-</i>. Per entrare in modalità di configurazione o passare dalla configurazione delle frequenza alla configurazione della lunghezza occorre premere e tener premuto il pulsante di <i>setup</i>. Dopo un periodo di inattività il CO2-HopCannon torna automaticamente in modalità <b>Countdown</b>.</p>
 		</td>
 	</tr>
 	<tr>
@@ -578,10 +578,10 @@ Esistono fondamentalmente tre stati per il CO2-HopCannon:
 </table>
 
 <p align="justify">
-Quando il CO2-HopCannon si trova in modalità <b>Countdown</b> o <b>Settings</b> puoi forzare lo sparo prememndo e tenendo premuti contemporaneamente i pulsanti <i>+</i> e <i>-</i>.
+Quando il CO2-HopCannon si trova in modalità <b>Countdown</b> o <b>Settings</b> puoi forzare lo sparo premendo e tenendo premuti contemporaneamente i pulsanti <i>+</i> e <i>-</i> Dopo un periodo di inattività il CO2-HopCannon disattiva automaticamente la retroilluminazione LCD per risparmiare energia. Per riattivare la retroilluminazione LCD è sufficiente premere per qualche secondo uno qualunque dei pulsanti.
 </p>
 
 ## Donazioni
-Se questo progetto ti ha aiutato in qualche modo puoi offrirmi una birra o un caffè :smiley:
+Se questo progetto ti ha aiutato in qualche modo, puoi offrirmi una birra o un caffè :smiley:
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
