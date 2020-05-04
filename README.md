@@ -7,7 +7,7 @@
 <img align="right" width="50%" src="/imgs/circuit.png" >
 
 <p align="justify">
-I have used the classic hop bags for years, but the result was not what I hoped for: I could not get the explosiveness of the hop I wanted. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free. Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon project creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the yield of the hops.
+I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extracion.
 </p>
 
 ## Components
@@ -122,7 +122,7 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 
 <img src="/imgs/photos/pcb_05.png" width="24%" /> <img src="/imgs/photos/pcb_06.png" width="24%" /> <img src="/imgs/photos/pcb_07.png" width="24%" /> <img src="/imgs/photos/pcb_08.png" width="24%" />
 
-<p align="justify">The PCB fritzing model (single layer) and all the other useful files are available in the <a href="/pcb/">pcb</a> folder. In the <a href="/pcb/export/">export subfolder</a> you can find the exported PCB in three different formats: <a href="/pcb/export/pfd/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, and <a href="/pcb/export/svg/">svg</a>. In the <a href="/pcb/flatcam/">flatcam</a> subfolder the <a href="http://flatcam.org/">flatcam</a> project to generate the routes for the CNC milling machine is provided. For convenience, a bunch of gcodes file are grouped in the <a href="/pcb/flatcam/">gcode folder</a>:</p> 
+<p align="justify">The PCB fritzing model (single layer) and all the other useful files are available in the <a href="/pcb/">pcb</a> folder. In the <a href="/pcb/export/">export</a> subfolder you can find the exported PCB in three different formats: <a href="/pcb/export/pdf/">pdf</a>, <a href="/pcb/export/gerber/">gerber</a>, and <a href="/pcb/export/svg/">svg</a>. In the <a href="/pcb/flatcam/">flatcam</a> subfolder the <a href="http://flatcam.org/">flatcam</a> project to generate the routes for the CNC milling machine is provided. For convenience, a bunch of gcodes file are grouped in the <a href="/pcb/flatcam/">gcode</a> folder:</p> 
 
 <table style="border: 0px">
 	<thead>
@@ -204,11 +204,11 @@ You have to drill and cut your case for buttons, valve, LCD, and power switch. T
 </table>
 
 <p align="justify">
-No gcode is available for the holes, but you can generate it from the flatcam project if you need it! The perfect tool for the isolation routes it the V-shaped Engraving Cutter. <b>Be careful</b> because the isolation routes have been generated using the non-mirrored PCB fritzing circuit. This means that Arduino nano must be welded upside down.
+No gcode is available for the holes, but you can generate it from the flatcam project if you need it! The perfect tool for the isolation routes it the V-shaped engraving cutter. <b>Be careful</b> because the isolation routes have been generated using the non-mirrored PCB fritzing circuit. This means that Arduino nano must be soldered upside down.
 </p>
 
 <p align="justify">
-The files starting with "AL" contain the same routes described above, but after the auto levelling process carried out with <a href="http://www.autoleveller.co.uk/">this</a> amazing software. 
+The files starting with "AL" contain the same routes described above, but after the auto levelling process carried out with <a href="http://www.autoleveller.co.uk/">this</a> extremely useful software. 
 </p>
 
 <p align="justify">
@@ -236,7 +236,9 @@ If you want to add a frame around the LCD screen like I did, find the 3D (stl) m
 #### Requirements
 
 - Arduino IDE (tested with version 1.8.8) to load the program into Arduino's memory;
-- Liquid Crystal I2C Arduino library. You can download the last version from <a href=""></a> or you can find the specific version I've tested and used in the <i>3rdparties</i> folder of this project.
+- Liquid Crystal I2C Arduino library. You can download the library from GitHub or find the specific version I've tested and used in the <i>3rdparties</i> folder of this project.
+
+#### Loading
 
 The CO2-HopCannon implementation is available in the <a href="/CO2-HopCannon/">CO2-HopCannon</a> folder. After installing the Arduino IDE, you have to <a href="https://www.arduino.cc/en/guide/libraries" target="_blank">install the 3rdparty library</a> and upload the CO2-HopCannon sketch.
 
@@ -248,6 +250,33 @@ Is this the first time you are using Arduino and you have no idea how to load a 
 If necessary, you can adjust configuration parameters by editing the file <a href="/CO2-HopCannon/settings.h">settings.h</a>. By default, the sketch will exploit the Arduino EEPROM memory to permanently store the configuration parameters (shot length and frequency) between different executions. 
 </p>
 
+<img src="/imgs/usage/usage_01.jpg" width="40%" />
+
+<p align="justify">
+From left to right the three buttons are respectively <i>setup</i>, <i>+</i>, and <i>-</i> buttons. 
+</p>
+
+<p align="justify">
+There are basically three state modes for the CO2-HopCannon: 
+</p>
+<table>
+	<tr>
+		<td><img src="/imgs/usage/mode_01.jpg" width="40%" /> </td>	
+		<td><b>Countdown Mode:</b> the display shows a countdown timer to the next shot. </td>
+	</tr>
+	<tr>
+		<td><img src="/imgs/usage/mode_02.jpg" width="40%" /> </td>	
+		<td><b>Settings Mode:</b> the display shows the configuration menu. When the CO2-HopCannon is in configuration mode you can update shot frequency and length by pressing <i>+</i> and/or <i>-</i> buttons. It is possible to enter the configuration mode or switch from frequency to length update by pressing and holding the <i>setup</i> button. After a period of inactivity the CO2-HopCannon will automatically switch to <b>Countdown Mode</b> again.</td>
+	</tr>
+	<tr>
+		<td><img src="/imgs/usage/mode_03.jpg" width="40%" /> </td>	
+		<td><b>Shooting Mode:</b> the display shows a gun that fires for the period in which the CO2 valve is open.</td>
+	</tr>
+</table>
+
+<p align="justify">
+When the CO2-HopCannon is in <b>Countdown</b> or <b>Settings</b> mode you can force a shot by simultaneously pressing and holding the <i>+</i> and <i>-</i> buttons.
+</p>
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/FedericoBolelli)
