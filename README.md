@@ -107,7 +107,7 @@ I have used the classic hop bags for years, but the result was not as expected. 
 			<td><img src="/imgs/components/cable.png" height="100" width="100"></td>
 			<td>Power Cable</td>
 			<td></td>
-			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">AliExpress </a>
+			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">Amazon </a>
 			</td>
 		</tr>
 	</tbody>
@@ -268,21 +268,21 @@ There are basically three state modes for the CO2-HopCannon:
 </p>
 <table>
 	<tr>
-		<td><img src="/imgs/usage/mode_01.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_01.jpg" width="100%" /> </td>	
 		<td><b>Countdown</b></td> 
 		<td>
 		<p align="justify">The display shows a countdown timer to the next shot.</p>
 		</td>
 	</tr>
 	<tr>
-		<td><img src="/imgs/usage/mode_02.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_02.jpg" width="100%" /> </td>	
 		<td><b>Settings</b></td>
 		<td>
 		<p align="justify">The display shows the configuration menu. When the CO2-HopCannon is in configuration mode you can update shot frequency and length by pressing <i>+</i> and/or <i>-</i> buttons. It is possible to enter the configuration mode or switch from frequency to length update by pressing and holding the <i>setup</i> button. After a period of inactivity the CO2-HopCannon will automatically switch to <b>Countdown Mode</b> again.</p>
 		</td>
 	</tr>
 	<tr>
-		<td><img src="/imgs/usage/mode_03.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_03.jpg" width="100%" /> </td>	
 		<td><b>Shooting</b></td>
 		<td>
 		<p align="justify">The display a firing gun for the period in which the CO2 valve is open.</p>
@@ -408,7 +408,7 @@ Ho utilizzato le classiche hop bag per anni, ma i risultati non erano quelli spe
 			<td><img src="/imgs/components/cable.png" height="100" width="100"></td>
 			<td>Cavo di <br />Alimentazione</td>
 			<td></td>
-			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">AliExpress </a>
+			<td><a href="https://www.amazon.it/Lindy-30346-Cavo-Alimentazione-Angolo/dp/B0058H0XGQ/ref=psdc_460032031_t3_B07DW2XFNM">Amazon </a>
 			</td>
 		</tr>
 	</tbody>
@@ -569,21 +569,21 @@ Esistono fondamentalmente tre stati per il CO2-HopCannon:
 </p>
 <table>
 	<tr>
-		<td><img src="/imgs/usage/mode_01.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_01.jpg" width="100%" /> </td>	
 		<td><b>Countdown</b></td> 
 		<td>
 		<p align="justify">Il display mostra il tempo mancante al prossimo sparo.</p>
 		</td>
 	</tr>
 	<tr>
-		<td><img src="/imgs/usage/mode_02.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_02.jpg" width="100%" /> </td>	
 		<td><b>Settings</b></td>
 		<td>
 		<p align="justify">Il display mostra il menu di configurazione. Quando il CO2-HopCannon si trova in modalità di configurazione è possibile aggiornare la frequenza e/o la lunghezza di sparo premendo i pulsanti <i>+</i> e/o <i>-</i>. Per entrare in modalità di configurazione o passare dalla configurazione delle frequenza alla configurazione della lunghezza occorre premere e tener premuto il pulsante di <i>setup</i>. Dopo un periodo di inattività il CO2-HopCannon torna automaticamente in modalità <b>Countdown</b>.</p>
 		</td>
 	</tr>
 	<tr>
-		<td><img src="/imgs/usage/mode_03.jpg" width="40%" /> </td>	
+		<td><img src="/imgs/usage/mode_03.jpg" width="100%" /> </td>	
 		<td><b>Shooting</b></td>
 		<td>
 		<p align="justify">Il display mostra una pistola che spara durante tutto il periodo in cui la valvola della CO2 è aperta.</p>
