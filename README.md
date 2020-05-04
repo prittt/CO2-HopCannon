@@ -2,7 +2,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
-[![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
 <img align="right" width="40%" src="/imgs/photos/preview_00.jpg" >
 
@@ -304,7 +304,7 @@ If this project helped you in any way, you can offer me a beer or a coffee :smil
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/FedericoBolelli) 
 [![Beer](https://img.shields.io/badge/made%20with-%F0%9F%8D%BA%20beer-yellow)](https://prittt.github.io/pages/beer)
 [![Release](https://img.shields.io/github/v/release/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/releases/latest/)
-[![License](https://img.shields.io/github/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/prittt/CO2-HopCannon)](https://github.com/prittt/CO2-HopCannon/blob/master/LICENSE)
 
 <img align="right" width="40%" src="/imgs/photos/preview_00.jpg" >
 
