@@ -10,11 +10,7 @@
 I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extracion.
 </p>
 
-<img width="19%" src="/imgs/photos/preview_01.jpg" >
-<img width="19%" src="/imgs/photos/preview_02.jpg" >
-<img width="19%" src="/imgs/photos/preview_03.jpg" >
-<img width="19%" src="/imgs/photos/preview_04.jpg" >
-<img width="19%" src="/imgs/photos/preview_05.jpg" >
+<img width="19%" src="/imgs/photos/preview_01.jpg" /> <img width="19%" src="/imgs/photos/preview_02.jpg" /> <img width="19%" src="/imgs/photos/preview_03.jpg" /> <img width="19%" src="/imgs/photos/preview_04.jpg" /> <img width="19%" src="/imgs/photos/preview_05.jpg" />
 
 ## Components
 
@@ -317,11 +313,7 @@ If this project helped you in any way, you can offer me a beer or a coffee :smil
 Ho utilizzato le classiche hop bag per anni, ma i risultati non erano quelli sperati: non riuscivo ad ottenere l'esplosività del luppolo che stavo cercando. Con il nuovo fermentatore a tronco conico ho provato ad aumentare l'efficacia del processo lasciando il lupppolo libero durante la fermentazione. Risultato? Peggio di prima! Il luppolo tende ad impaccarsi sul fondo del fermentatore e la quantità di aromi che rilascia è ridicola. Questo progetto, CO2-HopCannon, realizza un sistema automatico in grado di movimentare il luppolo all'interno del fermentatore usando la CO2, così da aumentarne al massimo la resa. 
 </p>
 
-<img width="19%" src="/imgs/photos/preview_01.jpg" >
-<img width="19%" src="/imgs/photos/preview_02.jpg" >
-<img width="19%" src="/imgs/photos/preview_03.jpg" >
-<img width="19%" src="/imgs/photos/preview_04.jpg" >
-<img width="19%" src="/imgs/photos/preview_05.jpg" >
+<img width="19%" src="/imgs/photos/preview_01.jpg" /> <img width="19%" src="/imgs/photos/preview_02.jpg" /> <img width="19%" src="/imgs/photos/preview_03.jpg" /> <img width="19%" src="/imgs/photos/preview_04.jpg" /> <img width="19%" src="/imgs/photos/preview_05.jpg" />
 
 ## Componenti
 
