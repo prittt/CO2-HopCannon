@@ -7,7 +7,7 @@
 <!-- <img align="right" width="40%" src="/imgs/photos/preview_00.jpg" > -->
 
 <p align="justify">
-I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extracion.
+I have used the classic hop bags for years, but the result was not as expected. I was unable to get the explosiveness of the hop I was looking for. With the new conical trunk fermenter I tried to increase the effectiveness of the process by leaving the hop free during fermentation. The Result? Worse than before! Hops tend to pack on the bottom of the fermenter and the amount of aromas it releases is ridiculous. This CO2-HopCannon tool creates an automatic system capable of moving the hops inside the fermenter during dry hopping, so as to maximize the effectiveness of the process and aroma extraction.
 </p>
 
 <img width="19%" src="/imgs/photos/preview_01.jpg" /> <img width="19%" src="/imgs/photos/preview_02.jpg" /> <img width="19%" src="/imgs/photos/preview_03.jpg" /> <img width="19%" src="/imgs/photos/preview_04.jpg" /> <img width="19%" src="/imgs/photos/preview_05.jpg" />
